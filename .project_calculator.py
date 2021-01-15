@@ -26,6 +26,18 @@ class Calculator(object):
     def multiply(self):
         "multiplying a*b=result -> return result"
         return self.argv1*self.argv2
+    
+    #Matrix operations
+    def m_add(self):
+        ax0=len(self.argv1[0])
+        ax1=len(self.argv1)
+        result_matrix=[]
+        for i in range(ax1):
+            result_matrix.append([])
+            for j in range(ax0):
+                result_matrix[i].append(self.argv1[i][j]+self.argv2[i][j])
+        return result_matrix
+        
 
 v1=10
 v2=20
